@@ -1,3 +1,5 @@
+from collections import Iterable
+
 names = ['Michael', 'Bob', 'Tracy']
 for name in names:
     print(name)
@@ -34,3 +36,23 @@ while n < 10:
     if n % 2 == 0:
         continue
     print(n)
+
+d = {'a': 1, 'b': 2, 'c': 3}
+for key in d:
+    print(key)
+
+for value in d.values():
+    print(value)
+
+for k, v in d.items():
+    print(k, ':', v)
+
+for ch in 'ABCDEF':
+    print(ch)
+
+# 判断元素是否是可迭代的
+print(isinstance('abc', Iterable))
+print(isinstance(123, Iterable))
+
+for i, value in enumerate(['A', 'B', 'C']):
+    print(i, ':', value)
