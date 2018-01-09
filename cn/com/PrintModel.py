@@ -1,13 +1,3 @@
-# 输入
-# name = input("please enter your name: ")
-# print(name)
-
-a = 100
-if a >= 0:
-    print(a)
-else:
-    print(-a)
-
 print(r'\\\t\\')
 
 a = "ABC"
@@ -17,6 +7,7 @@ print(b)
 
 print(11 / 5)
 print(10 // 3)
+print(11.4 // 3)
 
 print(ord('C'))
 print(ord('罗'))

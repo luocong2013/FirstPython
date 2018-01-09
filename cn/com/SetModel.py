@@ -7,6 +7,13 @@ if 'Rose' in student:
 else:
     print("Rose不在集合中")
 
+s = set([1, 1, 2, 2, 3, 3])
+print(s)
+s.add(5)
+print(s)
+s.remove(3)
+print(s)
+
 a = set("abracadabra")
 b = set("alacazam")
 

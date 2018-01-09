@@ -2,6 +2,11 @@ list = ["abcd", 789, 2.23, "runoob", 70.2]
 tinylist = [123, "runoob"]
 
 print(list)
+print(len(list))
+list.append('Admin')
+list.insert(1, 'Jack')
+list.pop(0)
+
 print(list[0])
 print(list[1:3])
 print(list[2:])
