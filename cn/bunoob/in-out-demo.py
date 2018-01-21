@@ -19,5 +19,3 @@ print('Runoob: {Runoob:d}; Google: {Google:d}; Taobao: {Taobao:d}'.format(**tabl
 # 读取键盘输入
 str = input("请输入：")
 print("你输入的内容是: ", str)
-
-# 读和写文件
