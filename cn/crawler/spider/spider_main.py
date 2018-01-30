@@ -1,6 +1,6 @@
 # 调度程序
 
-from cn.crawler.spider import url_manager, html_downloader, html_outputer, html_parser
+from cn.crawler.spider import url_manager, html_downloader, html_outputer, html_parser, db_mysql
 
 
 class SpiderMain(object):
@@ -9,6 +9,7 @@ class SpiderMain(object):
         self.downloader = html_downloader.HtmlDownloader()  # 下载器
         self.parser = html_parser.HtmlParser()  # 解析器
         self.outputer = html_outputer.HtmlOutputer()  # 输出器
+        self.mysql = db_mysql.Db_MySQL()  # 数据存入MySQL
 
     def craw(self, root_url):
         count = 1
