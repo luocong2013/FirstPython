@@ -9,7 +9,7 @@
 
 # 定义函数
 def printme(str):
-    "打印任何传入的字符串"
+    """打印任何传入的字符串"""
     print(str)
     return
 
@@ -30,7 +30,7 @@ printme(b)
 
 # 传可变对象实例. 如：列表、字典
 def changeme(myLst):
-    "修改传入的列表"
+    """修改传入的列表"""
     myLst.append([1, 2, 3, 4])
     print("函数内取值: ", myLst)
     return
