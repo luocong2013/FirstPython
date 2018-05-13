@@ -18,7 +18,7 @@ class Db_MySQL(object):
                          "title VARCHAR(200)," \
                          "pic_bin LONGBLOB," \
                          "PRIMARY KEY (id)) ENGINE=InnoDB DEFAULT CHARSET=utf8"
-        self.__dcl_sql = "INSERT INTO images(url, title, pic_bin) VALUES ('%s', '%s', '%s')"
+        self.__dcl_sql = "INSERT INTO images(url, title, pic_bin) VALUES (%s, %s, %s)"
         # 创建连接
         connection = pymysql.connect(**self.__config)
         try:
@@ -43,7 +43,7 @@ class Db_MySQL(object):
             with connection.cursor() as cursor:
                 param = (data['url'], data['title'], data['pic_bin'])
                 # 执行sql语句
-                cursor.execute(self.__dcl_sql % param)
+                cursor.execute(self.__dcl_sql, param)
                 # 提交执行
                 connection.commit()
         except Exception as e:

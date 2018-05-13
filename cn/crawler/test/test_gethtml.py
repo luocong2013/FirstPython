@@ -12,7 +12,7 @@ config = {
     'charset': 'utf8',
     'cursorclass': pymysql.cursors.DictCursor
 }
-dcl_sql = "INSERT INTO images(url, title, pic_bin) VALUES ('%s', '%s', '%s')"
+dcl_sql = "INSERT INTO images(url, title, pic_bin) VALUES (%s, %s, %s)"
 # 创建连接
 connection = pymysql.connect(**config)
 
@@ -32,7 +32,7 @@ for link in links:
         with connection.cursor() as cursor:
             # 执行sql语句
             param = (src, '111', pic_bin)
-            cursor.execute(dcl_sql % param)
+            cursor.execute(dcl_sql, param)
             # 提交执行
             connection.commit()
     except Exception as e:
