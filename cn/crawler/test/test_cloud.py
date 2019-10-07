@@ -1,8 +1,11 @@
 import urllib.request
 import requests
+
 '''
 爬取网易云音乐
 '''
+
+
 def write_lyric(song_name, lyric):
     print('正在写入歌曲：{}'.format(song_name))
     with open('/home/luoc/Music/CloudMusic/lyric/{}.txt'.format(song_name), 'a', encoding='UTF-8') as f:
